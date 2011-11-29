@@ -1,0 +1,8 @@
+<% @notes.each do |note| %>
+    <ul data-role="listview" data-inset="true" data-theme="c" data-split-icon="gear">
+      <li data-role="list-divider">Deine Notizen</li>
+        <li><%= link_to note.title,note_path(note)%>
+          <%= link_to 'Edit', edit_note_path(note) %>
+        </li>
+    </ul>
+<% end %>

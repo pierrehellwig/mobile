@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @note.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @note.description %>
+</p>
+
+<div data-role="controlgroup" data-type="horizontal" data-iconpos="left" >
+        <%= link_to "Back", notes_path,"data-role"=>"button","data-icon"=>"arrow-l" %>
+        <%= link_to "Destroy", note_path(@note),:method=>:delete,:confirm=>"Sicher?","data-role"=>"button","data-icon"=>"arrow-l" %>
+</div>

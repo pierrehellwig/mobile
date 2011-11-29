@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mobile</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div data-role="page">
+  
+  <div data-role="header">
+    <div data-role="navbar">
+      <ul>
+          <li><%= link_to "Alle Notizen",notes_path %></li>
+          <li><%= link_to "Neue Notiz",new_note_path %></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div data-role="content">
+    <%= yield %>
+  </div>
+
+</body>
+</html>
